@@ -35,7 +35,7 @@ function MyApp() {
     fetch(`http://localhost:8000/users/${id}`, { method: "DELETE" })
       .then((res) => {
         if (res.status === 204) {
-          setCharacters((prev) => prev.filter((c) => c.id !== id));
+          setCharacters((prev) => prev.filter((c) => c._id !== id));
         }
       })
       .catch((error) => console.log(error));
